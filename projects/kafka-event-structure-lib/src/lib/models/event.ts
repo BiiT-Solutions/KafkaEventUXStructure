@@ -5,10 +5,12 @@ export class Event<T>{
   to: string;
   replying: string;
   replyTo: string;
+  replyToSessionId: string;
   sessionId: string;
   messageId: string;
   correlationId: string;
   subject: string;
+  tenant: string;
   contentType: string;
   payload: T;
 
@@ -16,12 +18,15 @@ export class Event<T>{
     to.createdAt = from.createdAt ? new Date(from.createdAt) : null;
     to.createdBy = from.createdBy;
     to.id = from.id;
+    to.to = from.to;
     to.replying = from.replying;
     to.replyTo = from.replyTo;
+    to.replyToSessionId = from.replyToSessionId;
     to.sessionId = from.sessionId;
     to.messageId = from.messageId;
     to.correlationId = from.correlationId;
     to.subject = from.subject;
+    to.tenant = from.tenant;
     to.contentType = from.contentType;
     to.payload = from.payload;
   }
