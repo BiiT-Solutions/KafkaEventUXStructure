@@ -11,7 +11,7 @@ export class Event<T>{
   subject: string;
   contentType: string;
   payload: T;
-  // Angular transform Maps into a empty object. We need to set it as an object and transform map into it.
+  // Angular transforms Maps into an empty object. We need to set it as an object and transform map into it.
   private customProperties: { [key: string]: string; };
 
   set customPropertiesMap(value: Map<string, string>) {
