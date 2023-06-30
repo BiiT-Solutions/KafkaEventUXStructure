@@ -16,7 +16,13 @@ export class Event<T>{
 
   set customPropertiesMap(value: Map<string, string>) {
     this.customProperties = {};
+    if (value == null) {
+      return;
+    }
     value.forEach((value: string, key: string): void => {
+      if (key === null) {
+        return;
+      }
       this.customProperties[key] = value;
     })
   }
