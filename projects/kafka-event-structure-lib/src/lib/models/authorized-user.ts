@@ -1,5 +1,3 @@
-import {GrantedAuthority} from "./granted-authority";
-
 export class AuthorizedUser {
   createdAt : Date;
   createdBy : string;
