@@ -12,6 +12,7 @@ export class Event<T> {
   contentType: string;
   payload: T;
   entityType: string;
+  tag: string;
   // Angular transforms Maps into an empty object. We need to set it as an object and transform map into it.
   private customProperties: { [key: string]: string; };
 
@@ -42,6 +43,7 @@ export class Event<T> {
     to.contentType = from.contentType;
     to.payload = from.payload;
     to.entityType = from.entityType;
+    to.tag = from.tag;
     to.customProperties = from.customProperties;
   }
 }
