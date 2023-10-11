@@ -19,7 +19,7 @@ export class AuthService implements AuthCalls {
   private service: AuthenticationService;
 
   constructor(rootService: RootService, private httpClient: HttpClient) {
-    this.service = new AuthenticationService(rootService.serverUrl.toString, httpClient);}
+    this.service = new AuthenticationService(rootService, httpClient);}
   add(user: User): Observable<User> {
     return this.service.add(user);
   }
