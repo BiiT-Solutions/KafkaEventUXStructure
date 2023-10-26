@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Event} from "../models/event";
 import {Observable} from "rxjs";
-import {RootService} from "./root.service";
+import {KafkaEventStructureRootService} from "./kafka-event-structure-root.service";
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +17,7 @@ export class EventService {
   private static readonly DURATION_PATH: string = '/duration'
 
 
-  constructor(private rootService: RootService, private httpClient: HttpClient) { }
+  constructor(private rootService: KafkaEventStructureRootService, private httpClient: HttpClient) { }
 
   public createEvent<T>(event: Event<T>, topic?:string): Observable<Event<T>> {
     return this.httpClient.post<Event<T>>(

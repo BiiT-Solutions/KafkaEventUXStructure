@@ -1,5 +1,5 @@
 export class Constants {
   public static readonly SESSION_STORAGE = class {
-    public static readonly CONTEXT: string = 'user-manager';
+    public static readonly CONTEXT: string = 'kafka';
   }
 }
