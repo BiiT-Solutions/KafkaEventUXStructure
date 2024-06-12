@@ -9,6 +9,7 @@ export class Event<T> {
   messageId: string;
   correlationId: string;
   subject: string;
+  organization: string;
   contentType: string;
   payload: T;
   entityType: string;
@@ -40,6 +41,7 @@ export class Event<T> {
     to.messageId = from.messageId;
     to.correlationId = from.correlationId;
     to.subject = from.subject;
+    to.organization = from.organization;
     to.contentType = from.contentType;
     to.payload = from.payload;
     to.entityType = from.entityType;
