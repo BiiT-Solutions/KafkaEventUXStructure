@@ -1,8 +1,9 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Event} from "../models/event";
 import {Observable} from "rxjs";
 import {RootService} from "./root.service";
+import * as uuid from 'uuid';
 
 @Injectable({
   providedIn: 'root'
@@ -17,17 +18,26 @@ export class EventService {
   private static readonly DURATION_PATH: string = '/duration'
 
 
-  constructor(private rootService: RootService, private httpClient: HttpClient) { }
+  constructor(private rootService: RootService, private httpClient: HttpClient) {
+  }
 
-  public createEvent<T>(event: Event<T>, topic?:string): Observable<Event<T>> {
+  public createEvent<T>(event: Event<T>, topic?: string): Observable<Event<T>> {
+    if (event.messageId == undefined) {
+      event.messageId = uuid.v4();
+    }
     return this.httpClient.post<Event<T>>(
-      `${this.rootService.serverUrl}${EventService.ROOT_PATH}${topic? EventService.TOPICS_PATH + '/' + topic : ''}`,
+      `${this.rootService.serverUrl}${EventService.ROOT_PATH}${topic ? EventService.TOPICS_PATH + '/' + topic : ''}`,
       event);
   }
 
-  public createEvents<T>(events: Event<T>[], topic?:string): Observable<Event<T>[]> {
+  public createEvents<T>(events: Event<T>[], topic?: string): Observable<Event<T>[]> {
+    for (let event of events) {
+      if (event.messageId == undefined) {
+        event.messageId = uuid.v4();
+      }
+    }
     return this.httpClient.post<Event<T>[]>(
-      `${this.rootService.serverUrl}${EventService.ROOT_PATH}${topic? EventService.TOPICS_PATH
+      `${this.rootService.serverUrl}${EventService.ROOT_PATH}${topic ? EventService.TOPICS_PATH
         + EventService.TOPICS_ALL_PATH + topic : EventService.LIST_PATH}`,
       events);
   }

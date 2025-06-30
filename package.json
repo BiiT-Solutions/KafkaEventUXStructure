@@ -21,13 +21,15 @@
     "authorization-services-lib": "latest",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.12.0"
+    "zone.js": "~0.12.0",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "v15-lts",
     "@angular/cli": "v15-lts",
     "@angular/compiler-cli": "v15-lts",
     "@types/jasmine": "~4.3.0",
+    "@types/uuid": "^9.0.1",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
