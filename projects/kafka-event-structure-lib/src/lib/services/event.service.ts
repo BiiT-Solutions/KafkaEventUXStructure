@@ -1,8 +1,7 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Event} from "../models/event";
 import {Observable} from "rxjs";
-import {RootService} from "./root.service";
 import * as uuid from 'uuid';
 import {KafkaEventStructureRootService} from "./kafka-event-structure-root.service";
 
