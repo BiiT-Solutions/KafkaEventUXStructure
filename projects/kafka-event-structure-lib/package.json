@@ -1,10 +1,13 @@
 {
-  "name": "kafka-event-structure-lib",
+  "name": "@biit-solutions/kafka-event-structure",
   "version": "0.0.80",
+  "license": "AGPLv3",
+  "author": "BiiT Sourcing Solutions",
+  "private": false,
   "peerDependencies": {
     "@angular/common": "v15-lts",
     "@angular/core": "v15-lts",
-    "authorization-services-lib": "latest"
+    "@biit-solutions/authorization-services": "latest"
   },
   "scripts": {
     "increase-version": "npm --no-git-tag-version version patch"
@@ -12,5 +15,9 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BiiT-Solutions/KafkaEventUXStructure.git"
+  }
 }
