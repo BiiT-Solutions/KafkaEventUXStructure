@@ -11,8 +11,8 @@
     "strictPropertyInitialization": false,
     "strictNullChecks": false,
     "paths": {
-      "kafka-event-structure-lib": [
-        "dist/kafka-event-structure-lib"
+      "kafka-event-structure": [
+        "dist/kafka-event-structure"
       ]
     },
     "noImplicitReturns": true,

@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "kafka-event-structure-lib": {
+    "kafka-event-structure": {
       "projectType": "library",
-      "root": "projects/kafka-event-structure-lib",
-      "sourceRoot": "projects/kafka-event-structure-lib/src",
+      "root": "projects/kafka-event-structure",
+      "sourceRoot": "projects/kafka-event-structure/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/kafka-event-structure-lib/ng-package.json"
+            "project": "projects/kafka-event-structure/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/kafka-event-structure-lib/tsconfig.lib.prod.json"
+              "tsConfig": "projects/kafka-event-structure/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/kafka-event-structure-lib/tsconfig.lib.json"
+              "tsConfig": "projects/kafka-event-structure/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,7 +27,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/kafka-event-structure-lib/tsconfig.spec.json",
+            "tsConfig": "projects/kafka-event-structure/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"

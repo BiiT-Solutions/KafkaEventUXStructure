@@ -8,7 +8,7 @@ Run `npm run build` to build the library. The build artifacts will be stored in 
 
 ## Publishing
 
-After building your library with `npm run build`, go to the dist folder `cd dist/kafka-event-structure-lib` and run `npm publish`.
+After building your library with `npm run build`, go to the dist folder `cd dist/kafka-event-structure` and run `npm publish`.
 
 ## Using library in other applications.
 

@@ -1,5 +1,5 @@
 /*
- * Public API Surface of kafka-event-structure-lib
+ * Public API Surface of kafka-event-structure
  */
 
 export * from './lib/models/event';
